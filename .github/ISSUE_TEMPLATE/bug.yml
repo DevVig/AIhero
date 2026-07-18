@@ -1,0 +1,69 @@
+name: Bug report
+description: Something broke the companion (or the privacy promise)
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. If this is a **security / privacy** concern
+        (uploads, API keys, reading tool contents, writing other tools' configs),
+        please use [SECURITY.md](../SECURITY.md) instead of a public issue.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "14.5"
+    validations:
+      required: true
+  - type: input
+    id: swift
+    attributes:
+      label: Swift version (`swift --version`)
+      placeholder: "Apple Swift version 6.0"
+    validations:
+      required: true
+  - type: input
+    id: aihero
+    attributes:
+      label: AIhero version (`swift run AIhero --version` or bundled binary)
+      placeholder: "0.1.0"
+    validations:
+      required: false
+  - type: dropdown
+    id: codex
+    attributes:
+      label: Is Codex CLI installed and logged in?
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure / N/A"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: extras
+    attributes:
+      label: Extra context
+      description: Logs, screenshots, whether you used `swift run` or a packaged `.app`.

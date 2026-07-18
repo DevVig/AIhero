@@ -1,6 +1,6 @@
 # Task: Bespoke per-user hero generation via the user's own harness (Hatch-style)
 **Date Started**: 2026-07-18
-**Status**: Planning (awaiting approval)
+**Status**: Planning (post-v0.1 — not activated for the open-source launch)
 **Agent Lead**: 🏗️ Architect / ⚙️ Backend / 🎨 Designer
 **Supersedes** the earlier "authoring-time bundled art pack" draft of this same file.
 

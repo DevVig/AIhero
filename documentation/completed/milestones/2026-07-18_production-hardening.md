@@ -1,6 +1,6 @@
 # Task: Production Hardening
 **Date Started**: 2026-07-18
-**Status**: In Progress
+**Status**: Completed (Phases A–F done; signed/notarized DMG remains cert-gated — see RELEASE.md)
 **Agent Lead**: 🏗️⚙️
 
 ## Plan

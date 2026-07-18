@@ -201,16 +201,25 @@ Full detail + rationale: `documentation/completed/features/2026-07-18_unified-ac
   cert + a MagicPath icon PNG.
 - **Phase F complete:** read-only ambient activity reader + earned manual "Update" evolution.
 
-**In-flight active docs:** `documentation/active/2026-07-17_aihero-native-mvp.md` and
-`2026-07-18_production-hardening.md` (Phase F line now checked off there).
+**Completed docs (closed for v0.1):** MVP + production-hardening live under
+`documentation/completed/milestones/`. Phase F write-up:
+`documentation/completed/features/2026-07-18_unified-activity-signals.md`.
+
+**Open-source front door:** root `README.md`, MIT `LICENSE`, `CONTRIBUTING.md`,
+`SECURITY.md`, `CODE_OF_CONDUCT.md`, `.github/` CI + issue/PR templates,
+`documentation/reference/RELEASE.md`, and `--render` shots in
+`documentation/reference/screenshots/`.
 
 **Deferred / tracked (not blockers):**
 - Unix-domain-socket fast path for the ping transport (currently atomic-file).
 - Type-only reads to distinguish thinking / waiting / plan-ready (needs its own explicit consent step).
 - A forge "gather"-stage wiring test.
-- Signed/notarized DMG is gated on the user's Apple Developer cert being available.
+- Signed/notarized DMG is gated on the user's Apple Developer cert being available
+  (procedure documented in `documentation/reference/RELEASE.md`).
 - Evolution tunables (`xpGrant=10`, `xpGrantInterval=15s`, `xpForNextLevel=level*30`) are sensible
   defaults but **haven't been felt out in a long live session** — expect to retune the pace.
+- Full Hatch-style atlas animation / discovery worker — still in
+  `documentation/planned/features/2026-07-18_ai-hero-art-pipeline.md` (post-v0.1).
 - **Orphan test PNG** at `~/Library/Application Support/AIhero/art/40C360C3-2DED-4571-A42F-D09B94D58C62.png`
   — left from a render; the owner has **not** approved deleting it. Do not delete without confirming.
 
@@ -218,9 +227,9 @@ Full detail + rationale: `documentation/completed/features/2026-07-18_unified-ac
 
 ## 8. Gotchas / traps (things that will waste your afternoon)
 
-1. **The repo has NO git commits yet.** Everything is untracked (`git status` shows only `??`
-   entries). Before doing anything destructive, get an initial commit in. There is no history to fall
-   back on right now.
+1. **History is thin but real.** The repo has an initial commit and an open-source packaging
+   layer on top; treat `main` as the source of truth and prefer small, reviewable commits over
+   rewriting history.
 2. **SourceKit index-lag false positives.** After creating a new Swift file you'll see editor/
    diagnostic errors like *"Cannot find type 'X' in scope"* or *"Cannot infer contextual base in
    reference to member 'idle'"*. These are **not real** — `swift build` is the source of truth and
@@ -253,13 +262,16 @@ prefix** and are continually updated. Work items are `YYYY-MM-DD_description.md`
 
 Start non-trivial work in **plan mode**, write the plan to `planned/`, get approval, then move it to
 `active/` while implementing and log changes as you go. The most useful reading order for a newcomer:
-1. This file.
-2. `documentation/completed/features/2026-07-18_unified-activity-signals.md` (Phase F, the newest and
+1. Root `README.md` (product pitch + quickstart).
+2. This file.
+3. `documentation/completed/features/2026-07-18_unified-activity-signals.md` (Phase F, the newest and
    most nuanced subsystem, with the full privacy rationale).
-3. `documentation/active/2026-07-18_production-hardening.md` (what "production-ready" meant here).
-4. `documentation/completed/features/2026-07-18_forging-experience.md` (the forge/reveal UX).
-5. `documentation/planned/features/2026-07-18_ai-hero-art-pipeline.md` (where the art pipeline is
-   headed).
+4. `documentation/completed/milestones/2026-07-18_production-hardening.md` (what "production-ready"
+   meant for v0.1).
+5. `documentation/completed/features/2026-07-18_forging-experience.md` (the forge/reveal UX).
+6. `documentation/planned/features/2026-07-18_ai-hero-art-pipeline.md` (where the art pipeline is
+   headed — post-v0.1).
+7. `documentation/reference/RELEASE.md` (tags + cert-gated notarization).
 
 ---
 
@@ -267,8 +279,11 @@ Start non-trivial work in **plan mode**, write the plan to `planned/`, get appro
 
 1. `swift build && swift test` (expect 52/0) and `swift run AIhero` — get the companion on your
    desktop and forge a hero to build intuition.
-2. `swift run AIhero --render /tmp/shots` and browse the PNGs — the fastest way to see every surface.
-3. **Make the initial git commit** (see gotcha #1).
-4. Live-test the evolution pace: work for a while with Codex/Claude Code enabled, watch XP accrue, hit
+2. Browse `documentation/reference/screenshots/` (or re-run
+   `swift run AIhero --render documentation/reference/screenshots`) — the fastest way to see every
+   surface.
+3. Live-test the evolution pace: work for a while with Codex/Claude Code enabled, watch XP accrue, hit
    "Update," and confirm the re-forge feels good. Retune the XP tunables to taste.
+4. When Apple Developer credentials + a MagicPath icon PNG are ready, cut a notarized DMG per
+   `RELEASE.md` and attach it to a GitHub Release.
 5. When you touch anything that deploys or ships, re-read §2 — the privacy promises are the product.
