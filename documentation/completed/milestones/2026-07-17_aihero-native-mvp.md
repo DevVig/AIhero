@@ -1,6 +1,6 @@
 # Task: AIhero — Native macOS Collectible Companion (MVP v0.1)
 **Date Started**: 2026-07-17
-**Status**: In Progress (core loop functional)
+**Status**: Completed (MVP core loop shipped; see production-hardening + activity-signals for later phases)
 **Agent Lead**: 💻 Frontend / ⚙️ Backend
 
 ## Plan
@@ -94,10 +94,10 @@ open dist/AIhero.app             # menu-bar ⚡ appears; first run opens the she
   `Support/RenderHarness.swift`.
 
 ## Notes for Next Engineer
-- **Not yet built (future scope)**: real consented connectors + deterministic redaction feeding the
-  forge (currently `Source` toggles are flavor inputs only); real harness lifecycle tracking to
-  replace the simulated `WorkState`; hero evolution (level/xp/story chapters); per-pixel companion
-  hit-testing (window is currently a snug bounding box); "Jump to active app" routing.
-- **Screenshots of the live window** couldn't be captured here (no Screen Recording permission in
-  this environment); verification used offscreen rendering + a confirmed live launch.
-- Git initialized; **not committed** (awaiting user go-ahead).
+- **Shipped after this MVP note:** read-only ambient activity + earned evolution ("Update"),
+  bespoke Codex art pipeline, production hardening, open-source repo front door. See
+  `documentation/completed/` and `documentation/reference/HANDOFF.md`.
+- **Still future scope:** per-pixel companion hit-testing; "Jump to active app" routing;
+  full Hatch-style atlas animation (planned art pipeline).
+- Verification used `--render` offscreen PNGs + live launches; screenshots live in
+  `documentation/reference/screenshots/`.

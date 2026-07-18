@@ -1,0 +1,41 @@
+name: Feature idea
+description: A fun, collectible idea — not a dashboard knob
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        AIhero's north star is **"fun, not bloat."** Features that feel like an
+        admin console, telemetry panel, or settings explosion are out of scope.
+        Privacy constraints in [SECURITY.md](../SECURITY.md) still apply.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+      description: Describe the delight, not the architecture dump.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does this fit a collectible companion?
+      placeholder: How does this make forging / unboxing / leveling more fun?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy fit
+      options:
+        - label: This stays on-device (no AIhero server, no uploads)
+          required: true
+        - label: This does not require pasting an API key into the app
+          required: true
+        - label: This does not write into other tools' configs or parse their file contents
+          required: true
+  - type: textarea
+    id: extras
+    attributes:
+      label: Extra notes
+      description: Mockups, MagicPath refs, related issues — optional.
