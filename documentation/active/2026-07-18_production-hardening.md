@@ -1,6 +1,6 @@
 # Task: Production Hardening
 **Date Started**: 2026-07-18
-**Status**: In Progress
+**Status**: Complete (phases A–F done). Living ship checklist moved to root `PRODUCTION.md`.
 **Agent Lead**: 🏗️⚙️
 
 ## Plan

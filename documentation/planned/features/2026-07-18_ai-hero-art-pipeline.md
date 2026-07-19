@@ -149,7 +149,8 @@ build the Codex integration first, keep Gemini as a second detected path, proced
   `HeroForge.forge(…, artDirection:)`, `AppModel.forge(…, artDirection:harness:)` + `ArtGenStatus` +
   background `startArtGeneration`, `ForgeView` portrait section (style picker; harness note when one,
   picker when >1; "no harness → built-in art"), and a `--forge-test` headless hook. Builds clean
-  (Swift 6-warning-free). **Live end-to-end validation:** _in progress_ (one real `codex exec` run).
+  (Swift 6-warning-free). **Live end-to-end validation:** PASSED (packaged hardened `.app` + Phase 3
+  proof in `documentation/reference/phase3-proof/`).
 - [ ] Phase 2 (deferred behind MVP): reusable hero-forge skill (hatch-pet adapted; transparent cutout)
 - [ ] Phase 4: discovery/brief worker; full 9-row atlas; QA
-- [ ] Move this doc to `active/` on approval; log per-phase
+  (Tracked as should-haves S2/S3 in root `PRODUCTION.md`.)
